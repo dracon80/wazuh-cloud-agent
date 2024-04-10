@@ -8,4 +8,4 @@ RUN curl -o wazuh-agent.rpm https://packages.wazuh.com/4.x/yum/wazuh-agent-${AGE
 WORKDIR /wazuh-agent
 COPY wazuh-agent/* /wazuh-agent/
 
-ENTRYPOINT [ "/wazuh-agent/entryport.sh" ]
+ENTRYPOINT [ "/wazuh-agent/entrypoint.sh" ]
