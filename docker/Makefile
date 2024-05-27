@@ -20,15 +20,10 @@ _releaser:
 
 _debuger:
 	docker run -it --rm --entrypoint="/bin/bash" \
-		--mount type=bind,source=${LOCAL_WORKSPACE_FOLDER}/docker/.secrets/client.keys,target=/var/ossec/etc/client.keys,readonly \
-		--mount type=bind,source=${LOCAL_WORKSPACE_FOLDER}/docker/.secrets/config,target=/wazuh-agent/config,readonly \
-		--mount type=bind,source=${LOCAL_WORKSPACE_FOLDER}/wazuh-agent/update_ossec.sh,target=/wazuh-agent/update_ossec.sh,readonly \
 		${DOCKER_USERNAME}/${APPLICATION_NAME}:development
 
 _run:
 	docker run -it --rm \
-		--mount type=bind,source=${LOCAL_WORKSPACE_FOLDER}/docker/.secrets/client.keys,target=/var/ossec/etc/client.keys,readonly \
-		--mount type=bind,source=${LOCAL_WORKSPACE_FOLDER}/docker/.secrets/config,target=/wazuh-agent/config,readonly \
 		${DOCKER_USERNAME}/${APPLICATION_NAME}:development
 
 build:
