@@ -3,7 +3,7 @@ APPLICATION_NAME ?= wazuh-cloud-agent
 GIT_HASH ?= $(shell git log --format="%h" -n 1)
 
 _BUILD_ARGS_TAG ?= ${GIT_HASH}
-_BUILD_ARGS_RELEASE_TAG ?= 4.7.3-1.x86_64
+_BUILD_ARGS_RELEASE_TAG ?= 4.7.4-1.x86_64
 _BUILD_ARGS_DOCKERFILE ?= Dockerfile
 _BUILD_ENVIRONMENT ?= production
 
